@@ -1,6 +1,6 @@
-# Portfolio Nguyễn Trâm Anh — V3
+# Portfolio Nguyễn Trâm Anh — V7
 
-Bản V3 tập trung vào định vị **SEO Executive**, đồng thời có khu vực Creative để trưng bày banner, hình ảnh và video.
+Bản V7 tập trung vào định vị **SEO Executive**, đồng thời có khu vực Creative để trưng bày banner, hình ảnh và video.
 
 ## Cấu trúc
 - `index.html` — nội dung + bố cục
@@ -29,3 +29,7 @@ Khi GitHub Pages chạy ổn định, mới cấu hình Custom domain với doma
 - Thêm website của G Office: https://goffice.vn/
 - Thêm website của Visa Minh Quân: https://visaminhquan.com.vn/
 - Bổ sung tool stack: ChatGPT, Gemini, Semrush, Ahrefs, Google Analytics 4, Google Search Console, Canva, CapCut, Screaming Frog, WordPress và LadiPage.
+
+
+## Màu nhấn
+Giữ xanh navy/xanh dương làm màu chủ đạo, bổ sung cam #F26B38 làm điểm nhấn nhẹ cho brand, active navigation, project labels và AI workflow.
