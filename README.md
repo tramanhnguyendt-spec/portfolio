@@ -1,17 +1,31 @@
-# Portfolio Nguyễn Trâm Anh
+# Portfolio Nguyễn Trâm Anh — V3
 
-Website portfolio cá nhân — SEO Executive.
+Bản V3 tập trung vào định vị **SEO Executive**, đồng thời có khu vực Creative để trưng bày banner, hình ảnh và video.
 
-## Chạy thử
-Mở `index.html` bằng trình duyệt.
+## Cấu trúc
+- `index.html` — nội dung + bố cục
+- `style.css` — giao diện responsive
+- `script.js` — menu mobile, active navigation, scroll reveal, gallery lightbox
+- `assets/images/` — đặt ảnh banner/thumbnail/social
+- `assets/videos/` — đặt video nếu cần
 
-## Đưa lên GitHub Pages
-1. Upload toàn bộ file vào repository `portfolio`.
-2. Vào Settings → Pages.
-3. Source: Deploy from a branch.
-4. Branch: `main` / root.
-5. Save.
-6. GitHub sẽ cấp URL dạng `https://username.github.io/portfolio/`.
+## Ảnh Creative
+Để thay placeholder, đặt đúng tên:
+- `assets/images/banner-01.jpg`
+- `assets/images/thumbnail-01.jpg`
+- `assets/images/social-01.jpg`
 
-## Domain riêng
-Sau khi GitHub Pages chạy ổn định, cấu hình domain riêng trong Settings → Pages → Custom domain.
+Sau đó có thể sửa `index.html` để thêm bao nhiêu tác phẩm tùy ý.
+
+## GitHub Pages
+Upload toàn bộ file/thư mục vào repository `portfolio`, sau đó:
+Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
+
+## Domain
+Khi GitHub Pages chạy ổn định, mới cấu hình Custom domain với domain đã mua.
+
+
+## Cập nhật V5
+- Thêm website của G Office: https://goffice.vn/
+- Thêm website của Visa Minh Quân: https://visaminhquan.com.vn/
+- Bổ sung tool stack: ChatGPT, Gemini, Semrush, Ahrefs, Google Analytics 4, Google Search Console, Canva, CapCut, Screaming Frog, WordPress và LadiPage.
