@@ -233,22 +233,3 @@
     grid-template-columns:1fr !important;
   }
 }
-.portrait-placeholder {
-  position: relative;
-  width: 390px;
-  height: 490px;
-  overflow: hidden;
-  border-radius: 195px 195px 24px 24px;
-  background: #eaf2fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.portrait-placeholder img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center top;
-}
