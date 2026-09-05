@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio Nguyễn Trâm Anh — SEO Executive. SEO, Content, Digital Marketing và Creative.">
+  <meta name="theme-color" content="#071b33">
   <meta property="og:title" content="Nguyễn Trâm Anh — SEO Executive">
   <meta property="og:description" content="SEO · Content · Digital Marketing · Creative">
   <title>Nguyễn Trâm Anh — SEO Executive</title>
@@ -12,8 +13,8 @@
 <body>
 <header class="site-header">
   <a class="brand" href="#top">TRÂM ANH<span>.</span></a>
-  <button class="menu-toggle" aria-label="Mở menu">☰</button>
-  <nav class="nav">
+  <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+  <nav class="nav" aria-label="Điều hướng chính">
     <a href="#about">Về tôi</a>
     <a href="#seo">SEO</a>
     <a href="#projects">Dự án</a>
@@ -25,30 +26,28 @@
 
 <main id="top">
 <section class="hero">
-  <div class="hero-copy">
+  <div class="hero-copy reveal">
     <p class="eyebrow">NGUYỄN TRÂM ANH · SEO EXECUTIVE</p>
-    <h1>Từ khả năng<br><em>được tìm thấy</em><br>đến cách doanh nghiệp được nhìn thấy.</h1>
-    <p class="hero-text">SEO · Content · Digital Marketing</p>
+    <h1>Từ khả năng <em>được tìm thấy</em> đến cách doanh nghiệp được nhìn thấy.</h1>
+    <p class="hero-sub">SEO · CONTENT · DIGITAL MARKETING</p>
     <p class="lead">Tôi không xem SEO đơn thuần là việc đưa từ khóa lên Top Google. Tôi muốn kết hợp SEO, nội dung, website và hình ảnh để đưa doanh nghiệp, sản phẩm và dịch vụ đến đúng khách hàng.</p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">Xem dự án</a>
-      <a class="btn ghost" href="#about">Về tôi</a>
-    </div>
+    <div class="actions"><a class="btn primary" href="#projects">Xem dự án</a><a class="btn ghost" href="#contact">Liên hệ</a></div>
   </div>
-  <div class="hero-card">
+  <div class="hero-visual reveal">
     <div class="portrait-placeholder">ẢNH<br>TRÂM ANH</div>
     <div class="floating-note">SEO<br><strong>+ Content</strong><br>+ Creative</div>
   </div>
 </section>
 
-<section class="statement">
+<section class="statement reveal">
   <p class="eyebrow">GÓC NHÌN</p>
   <h2>Thứ hạng là một phần của câu chuyện.<br><span>Khách hàng mới là đích đến.</span></h2>
 </section>
 
-<section id="about" class="section about">
+<section id="about" class="section">
   <div class="section-label">01 / VỀ TÔI</div>
-  <div class="section-content">
+  <div class="section-content reveal">
+    <p class="eyebrow">SEO EXECUTIVE · DIGITAL MARKETING</p>
     <h2>Tôi không chỉ viết Content hay đẩy thứ hạng từ khóa.</h2>
     <div class="two-col">
       <p>Tôi bắt đầu từ Content và Digital Marketing, sau đó phát triển sâu hơn về SEO. Trong quá trình làm việc, tôi quan tâm không chỉ một bài viết đứng ở vị trí nào trên Google, mà còn khách hàng nhìn thấy gì, hiểu doanh nghiệp như thế nào và nội dung có thực sự giúp họ tiến gần hơn đến sản phẩm, dịch vụ hay không.</p>
@@ -59,7 +58,7 @@
 
 <section id="seo" class="section dark">
   <div class="section-label">02 / SEO</div>
-  <div class="section-content">
+  <div class="section-content reveal">
     <p class="eyebrow">NĂNG LỰC CHUYÊN MÔN</p>
     <h2>SEO từ nghiên cứu đến tối ưu.</h2>
     <div class="skill-grid">
@@ -71,47 +70,42 @@
   </div>
 </section>
 
-<section id="projects" class="section">
+<section id="projects" class="section projects-section">
   <div class="section-label">03 / DỰ ÁN</div>
   <div class="section-content">
-    <p class="eyebrow">SELECTED PROJECTS</p>
-    <h2>Hai dự án thể hiện rõ cách tôi làm SEO.</h2>
+    <p class="eyebrow reveal">SELECTED PROJECTS</p>
+    <h2 class="reveal">Những dự án cho thấy cách tôi biến SEO thành khả năng tiếp cận khách hàng.</h2>
 
-    <div class="project-feature">
+    <article class="project-feature featured reveal">
       <div class="project-heading">
-        <div>
-          <span class="project-number">01</span>
-          <p class="eyebrow">G OFFICE · DIGITAL MARKETING & SEO</p>
-          <h3>G Office</h3>
-        </div>
+        <div><span class="project-number">01</span><p class="eyebrow">G OFFICE · DIGITAL MARKETING & SEO</p><h3>G Office</h3></div>
         <span class="project-role">Digital Marketing Executive</span>
       </div>
-      <p class="project-intro">Một dự án nổi bật về tăng trưởng Organic Search, kết hợp Content, SEO, Google Business và hoạt động Digital Marketing để đưa dịch vụ tiếp cận khách hàng.</p>
+      <p class="project-intro">Case study nổi bật về tăng trưởng Organic Search, kết hợp Content, SEO, Google Business và hoạt động Digital Marketing để đưa dịch vụ tiếp cận khách hàng.</p>
       <div class="metrics">
-        <div><strong>13.000+</strong><span>Organic traffic/tháng ở giai đoạn cao nhất</span></div>
-        <div><strong>20+</strong><span>Bài viết đạt Top 1–10</span></div>
-        <div><strong>1.000+</strong><span>Organic traffic/tháng từ nền tảng ban đầu</span></div>
+        <div><strong data-count="13000">13.000+</strong><span>Organic traffic/tháng ở giai đoạn cao nhất</span></div>
+        <div><strong data-count="20">20+</strong><span>Bài viết đạt Top 1–10</span></div>
+        <div><strong>6</strong><span>Chi nhánh triển khai Google Business</span></div>
       </div>
       <div class="case-box">
         <div><p class="eyebrow">TÔI ĐÃ TRIỂN KHAI</p><h3>Từ nội dung đến khả năng được khách hàng tìm thấy.</h3></div>
         <ul>
-          <li>Nghiên cứu từ khóa, phân tích Search Intent và đối thủ</li>
+          <li>Nghiên cứu từ khóa, Search Intent và đối thủ</li>
           <li>Xây dựng kế hoạch và triển khai nội dung SEO</li>
           <li>Tối ưu On-page, Internal Link và cấu trúc nội dung</li>
           <li>Phát triển Google Business cho hệ thống 6 chi nhánh</li>
           <li>Theo dõi Organic Traffic, Ranking và tối ưu nội dung</li>
         </ul>
       </div>
-      <p class="note">* Khi hoàn thiện portfolio, phần này sẽ bổ sung screenshot GSC, biểu đồ tăng trưởng và các URL/bài viết tiêu biểu.</p>
-    </div>
+      <div class="evidence-grid">
+        <div class="evidence-placeholder">SCREENSHOT GSC<br><small>Thêm ảnh tăng trưởng Organic Traffic</small></div>
+        <div class="evidence-placeholder">SERP / TOP KEYWORD<br><small>Thêm ảnh ranking hoặc bài Top 1–10</small></div>
+      </div>
+    </article>
 
-    <div class="project-feature secondary-project">
+    <article class="project-feature secondary-project reveal">
       <div class="project-heading">
-        <div>
-          <span class="project-number">02</span>
-          <p class="eyebrow">VISA MINH QUÂN · SEO</p>
-          <h3>Visa Minh Quân</h3>
-        </div>
+        <div><span class="project-number">02</span><p class="eyebrow">VISA MINH QUÂN · SEO</p><h3>Visa Minh Quân</h3></div>
         <span class="project-role">SEO Executive</span>
       </div>
       <p class="project-intro">Xây dựng nền tảng SEO cho website mới: từ cấu trúc website, Keyword Mapping và Topic Cluster đến Content, On-page, Index và Ranking.</p>
@@ -124,15 +118,16 @@
         <div>01<br><b>Cấu trúc</b></div><div>02<br><b>Keyword Mapping</b></div><div>03<br><b>Topic Cluster</b></div>
         <div>04<br><b>Content</b></div><div>05<br><b>On-page</b></div><div>06<br><b>Index → Ranking</b></div>
       </div>
-    </div>
+      <div class="evidence-grid one"><div class="evidence-placeholder">SCREENSHOT WEBSITE / GSC / SERP<br><small>Thêm bằng chứng thực tế cho case study</small></div></div>
+    </article>
   </div>
 </section>
 
 <section id="experience" class="section alt">
   <div class="section-label">04 / KINH NGHIỆM</div>
-  <div class="section-content timeline">
+  <div class="section-content timeline reveal">
     <div class="job"><div class="date">01/2026 — nay</div><div><h3>SEO Executive</h3><p>Visa Minh Quân</p><span>SEO website mới · Content Strategy · On-page · Technical phối hợp</span></div></div>
-    <div class="job"><div class="date">11/2021 — 08/2025</div><div><h3>Digital Marketing Executive</h3><p>G Office</p><span>Content & SEO · Google Business · Website · Multimedia</span><div class="result">Organic traffic: 1.000+ → đỉnh hơn 13.000/tháng · 20+ bài Top 1–10</div></div></div>
+    <div class="job"><div class="date">11/2021 — 08/2025</div><div><h3>Digital Marketing Executive</h3><p>G Office</p><span>Content & SEO · Google Business · Website · Multimedia</span><div class="result">Organic traffic: 1.000+ → hơn 13.000/tháng · 20+ bài Top 1–10</div></div></div>
     <div class="job"><div class="date">10/2019 — 08/2021</div><div><h3>Leader Content & Trợ lý Giám đốc Marketing</h3><p>LiteFinance Academy</p><span>Quản lý Content · SEO On-page · phối hợp SEO/Marketing</span></div></div>
     <div class="job"><div class="date">2018 — 2019</div><div><h3>Content Marketing & SEO Executive</h3><p>Kendy Real · Toàn Phát</p><span>SEO Content · On-page/Off-page · Keyword Research</span></div></div>
   </div>
@@ -140,15 +135,15 @@
 
 <section id="creative" class="section creative">
   <div class="section-label">05 / CREATIVE</div>
-  <div class="section-content">
+  <div class="section-content reveal">
     <p class="eyebrow">MULTIMEDIA & DESIGN</p>
     <h2>SEO là chuyên môn chính.<br>Creative là lợi thế bổ trợ.</h2>
     <p class="project-intro">Tôi có thể chủ động triển khai hình ảnh, banner, thumbnail, infographic, chụp ảnh và video cơ bản để hỗ trợ Content và Digital Marketing.</p>
     <div class="gallery">
-      <div class="gallery-card large"><div class="media-placeholder">BANNER / VISUAL<br><small>Thay bằng sản phẩm thực tế</small></div></div>
-      <div class="gallery-card"><div class="media-placeholder">THUMBNAIL</div></div>
-      <div class="gallery-card"><div class="media-placeholder">SOCIAL POST</div></div>
-      <div class="gallery-card video"><div class="media-placeholder">VIDEO<br><small>Nhúng TikTok / YouTube</small></div></div>
+      <button class="gallery-card large" data-modal="assets/images/banner-01.jpg" aria-label="Mở ảnh banner"><span class="media-placeholder">BANNER / VISUAL<br><small>Thay file banner-01.jpg</small></span></button>
+      <button class="gallery-card" data-modal="assets/images/thumbnail-01.jpg" aria-label="Mở ảnh thumbnail"><span class="media-placeholder">THUMBNAIL<br><small>Thay file thumbnail-01.jpg</small></span></button>
+      <button class="gallery-card" data-modal="assets/images/social-01.jpg" aria-label="Mở ảnh social post"><span class="media-placeholder">SOCIAL POST<br><small>Thay file social-01.jpg</small></span></button>
+      <div class="gallery-card video"><div class="video-placeholder">VIDEO<br><small>Đặt video MP4 trong assets/videos/ hoặc thay bằng iframe TikTok/YouTube</small></div></div>
     </div>
     <div class="creative-tags">Canva · Photoshop · CapCut · Chụp ảnh · Video · LadiPage · WordPress</div>
   </div>
@@ -156,7 +151,7 @@
 
 <section class="section tools">
   <div class="section-label">06 / KỸ NĂNG BỔ TRỢ</div>
-  <div class="section-content">
+  <div class="section-content reveal">
     <div class="tool-list">
       <span>Content & Marketing</span><span>Phân tích thị trường</span><span>Lập kế hoạch</span><span>Landing Page</span><span>Google Business</span><span>Canva</span><span>Photoshop</span><span>CapCut</span><span>AI Tools</span><span>Làm việc nhóm</span>
     </div>
@@ -164,15 +159,22 @@
 </section>
 
 <section id="contact" class="contact">
-  <p class="eyebrow">07 / LIÊN HỆ</p>
-  <h2>Bạn đang tìm một<br><em>SEO Executive đa năng?</em></h2>
-  <p>Tôi sẵn sàng trao đổi về những dự án SEO, Content và Digital Marketing phù hợp.</p>
-  <div class="contact-links">
-    <a href="mailto:tramanhnguyendt@gmail.com">tramanhnguyendt@gmail.com</a>
-    <a href="tel:0967649147">0967 649 147</a>
+  <div class="reveal">
+    <p class="eyebrow">07 / LIÊN HỆ</p>
+    <h2>Bạn đang tìm một<br><em>SEO Executive đa năng?</em></h2>
+    <p>Tôi sẵn sàng trao đổi về những dự án SEO, Content và Digital Marketing phù hợp.</p>
+    <div class="contact-links">
+      <a href="mailto:tramanhnguyendt@gmail.com">tramanhnguyendt@gmail.com</a>
+      <a href="tel:0967649147">0967 649 147</a>
+    </div>
   </div>
 </section>
 </main>
+
+<div class="modal" id="imageModal" aria-hidden="true">
+  <button class="modal-close" aria-label="Đóng">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
 
 <footer>© 2026 Nguyễn Trâm Anh · SEO Executive</footer>
 <script src="script.js"></script>
