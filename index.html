@@ -35,12 +35,11 @@
     <p class="lead">Tôi không xem SEO đơn thuần là việc đưa từ khóa lên Top Google. Tôi muốn kết hợp SEO, nội dung, website và hình ảnh để đưa doanh nghiệp, sản phẩm và dịch vụ đến đúng khách hàng.</p>
     <div class="actions"><a class="btn primary" href="#projects">Xem dự án</a><a class="btn ghost" href="#contact">Liên hệ</a></div>
   </div>
-<div class="hero-visual reveal">
-  <div class="portrait-placeholder">
-    <img src="profile.jpg" alt="Nguyễn Trâm Anh - SEO Executive">
-  </div>
-  <div class="floating-note">SEO<br><strong>+ Content</strong><br>+ Creative</div>
-</div>
+  <div class="hero-visual reveal">
+    <div class="portrait-placeholder" data-media="profile">
+      <span class="hero-media-placeholder">ẢNH<br>TRÂM ANH</span>
+    </div>
+    <div class="floating-note">SEO<br><strong>+ Content</strong><br>+ Creative</div>
   </div>
 </section>
 
@@ -105,15 +104,18 @@
       <div class="evidence-grid evidence-grid-3">
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">01</div>
-          <div><strong>ORGANIC TRAFFIC</strong><small>Đặt ảnh biểu đồ Organic Traffic tại đây</small></div>
+          <div class="evidence-media" data-media="gofficeTraffic"></div>
+          <div class="evidence-label"><strong>ORGANIC TRAFFIC</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">02</div>
-          <div><strong>ORGANIC KEYWORDS</strong><small>Đặt ảnh biểu đồ Organic Keywords tại đây</small></div>
+          <div class="evidence-media" data-media="gofficeKeywords"></div>
+          <div class="evidence-label"><strong>ORGANIC KEYWORDS</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">03</div>
-          <div><strong>KEYWORD RANKING</strong><small>Đặt ảnh bảng / báo cáo thứ hạng tại đây</small></div>
+          <div class="evidence-media" data-media="gofficeRanking"></div>
+          <div class="evidence-label"><strong>KEYWORD RANKING</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
       </div>
     </article>
@@ -136,23 +138,28 @@
       <div class="evidence-grid evidence-grid-5">
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">01</div>
-          <div><strong>RANKING OVERVIEW</strong><small>Đặt ảnh số liệu tổng quan</small></div>
+          <div class="evidence-media" data-media="visaRankingOverview"></div>
+          <div class="evidence-label"><strong>RANKING OVERVIEW</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">02</div>
-          <div><strong>KEYWORD DETAIL</strong><small>Đặt ảnh bảng thứ hạng từ khóa</small></div>
+          <div class="evidence-media" data-media="visaKeywordDetail"></div>
+          <div class="evidence-label"><strong>KEYWORD DETAIL</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">03</div>
-          <div><strong>SERP / AI OVERVIEW</strong><small>Đặt ảnh kết quả tìm kiếm</small></div>
+          <div class="evidence-media" data-media="visaAiOverview"></div>
+          <div class="evidence-label"><strong>SERP / AI OVERVIEW</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">04</div>
-          <div><strong>ORGANIC TRAFFIC</strong><small>Đặt ảnh dữ liệu traffic</small></div>
+          <div class="evidence-media" data-media="visaTraffic"></div>
+          <div class="evidence-label"><strong>ORGANIC TRAFFIC</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
         <div class="evidence-placeholder evidence-photo">
           <div class="evidence-index">05</div>
-          <div><strong>SEO PROGRESS</strong><small>Đặt ảnh kết quả / tiến độ SEO</small></div>
+          <div class="evidence-media" data-media="visaProgress"></div>
+          <div class="evidence-label"><strong>SEO PROGRESS</strong><small>Thêm tên file ở MEDIA trong script.js</small></div>
         </div>
       </div>
     </article>
@@ -176,10 +183,10 @@
     <h2>SEO là chuyên môn chính.<br>Creative là lợi thế bổ trợ.</h2>
     <p class="project-intro">Tôi có thể chủ động triển khai hình ảnh, banner, thumbnail, infographic, chụp ảnh và video cơ bản để hỗ trợ Content và Digital Marketing.</p>
     <div class="gallery">
-      <button class="gallery-card large" data-modal="assets/images/banner-01.jpg" aria-label="Mở ảnh banner"><span class="media-placeholder">BANNER / VISUAL<br><small>Thay file banner-01.jpg</small></span></button>
-      <button class="gallery-card" data-modal="assets/images/thumbnail-01.jpg" aria-label="Mở ảnh thumbnail"><span class="media-placeholder">THUMBNAIL<br><small>Thay file thumbnail-01.jpg</small></span></button>
-      <button class="gallery-card" data-modal="assets/images/social-01.jpg" aria-label="Mở ảnh social post"><span class="media-placeholder">SOCIAL POST<br><small>Thay file social-01.jpg</small></span></button>
-      <div class="gallery-card video"><div class="video-placeholder">VIDEO<br><small>Đặt video MP4 trong assets/videos/ hoặc thay bằng iframe TikTok/YouTube</small></div></div>
+      <button class="gallery-card large" data-modal-media="banner01" aria-label="Mở ảnh banner"><span class="media-slot" data-media="banner01"><span class="media-placeholder">BANNER / VISUAL<br><small>Thêm tên file ở MEDIA trong script.js</small></span></span></button>
+      <button class="gallery-card" data-modal-media="thumbnail01" aria-label="Mở ảnh thumbnail"><span class="media-slot" data-media="thumbnail01"><span class="media-placeholder">THUMBNAIL<br><small>Thêm tên file ở MEDIA trong script.js</small></span></span></button>
+      <button class="gallery-card" data-modal-media="social01" aria-label="Mở ảnh social post"><span class="media-slot" data-media="social01"><span class="media-placeholder">SOCIAL POST<br><small>Thêm tên file ở MEDIA trong script.js</small></span></span></button>
+      <div class="gallery-card video" data-video-media="video01"><div class="video-slot"><div class="video-placeholder">VIDEO<br><small>Thêm tên file MP4 ở MEDIA trong script.js</small></div></div></div>
     </div>
     <div class="creative-tags">Canva · Photoshop · CapCut · Chụp ảnh · Video · LadiPage · WordPress</div>
   </div>
