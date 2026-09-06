@@ -1,0 +1,223 @@
+/* PORTFOLIO V4 — LAYOUT FIX
+   Load this file AFTER navy-orange-final.css.
+   Fixes: G Office evidence images + Creative gallery proportions.
+*/
+
+/* =========================
+   G OFFICE EVIDENCE — KEEP IMAGES VISIBLE
+   ========================= */
+#projects .evidence-grid-2{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:20px !important;
+  align-items:stretch !important;
+}
+
+#projects .evidence-grid-2 .evidence-photo{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  align-items:stretch !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  overflow:hidden !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  padding:18px !important;
+}
+
+#projects .evidence-grid-2 .evidence-media{
+  position:relative !important;
+  z-index:1 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  height:300px !important;
+  min-height:300px !important;
+  flex:0 0 300px !important;
+  margin:0 0 16px !important;
+  overflow:hidden !important;
+  border-radius:12px !important;
+  background:#eef2f5 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#projects .evidence-grid-2 .evidence-media img{
+  position:static !important;
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 !important;
+  padding:0 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  border-radius:12px !important;
+  background:#fff !important;
+}
+
+#projects .evidence-grid-2 .evidence-label{
+  position:relative !important;
+  z-index:2 !important;
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* =========================
+   CREATIVE — SMALLER, BALANCED
+   ========================= */
+#creative .creative-gallery{
+  display:grid !important;
+  grid-template-columns:1.15fr .85fr !important;
+  grid-template-areas:
+    "banner side"
+    "video side" !important;
+  gap:18px !important;
+  align-items:stretch !important;
+  margin-top:30px !important;
+}
+
+#creative .creative-banner{
+  grid-area:banner !important;
+}
+
+#creative .creative-video{
+  grid-area:video !important;
+}
+
+#creative button.creative-vertical:nth-child(2),
+#creative button.creative-vertical:nth-child(3){
+  grid-area:auto !important;
+}
+
+#creative .creative-gallery > .creative-vertical{
+  grid-column:auto !important;
+}
+
+#creative .creative-gallery > .creative-vertical:nth-child(2){
+  grid-area:side !important;
+}
+
+#creative .creative-gallery > .creative-vertical:nth-child(3){
+  grid-area:side !important;
+  margin-top:0 !important;
+}
+
+/* Stack the two right-hand Creative cards inside one visual column. */
+#creative .creative-gallery > .creative-vertical:nth-child(2),
+#creative .creative-gallery > .creative-vertical:nth-child(3){
+  align-self:stretch !important;
+}
+
+#creative .creative-banner .creative-media{
+  height:250px !important;
+  min-height:250px !important;
+}
+
+#creative .creative-vertical .creative-media{
+  height:245px !important;
+  min-height:245px !important;
+}
+
+#creative .creative-media{
+  width:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  background:#f4f5f6 !important;
+  border-radius:16px !important;
+}
+
+#creative .creative-media img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border-radius:16px !important;
+}
+
+#creative .creative-video .tiktok-embed-wrap{
+  height:420px !important;
+  min-height:420px !important;
+  overflow:hidden !important;
+  border-radius:16px !important;
+}
+
+#creative .creative-video .tiktok-embed-wrap iframe{
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  border:0 !important;
+}
+
+/* If the existing markup places the two vertical cards directly one after another,
+   keep their individual sizes sane instead of allowing them to become huge. */
+#creative .creative-gallery > .creative-card{
+  min-width:0 !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+@media (max-width:800px){
+  #projects .evidence-grid-2{
+    grid-template-columns:1fr !important;
+  }
+
+  #projects .evidence-grid-2 .evidence-media{
+    height:240px !important;
+    min-height:240px !important;
+    flex-basis:240px !important;
+  }
+
+  #creative .creative-gallery{
+    grid-template-columns:1fr !important;
+    grid-template-areas:
+      "banner"
+      "thumb"
+      "social"
+      "video" !important;
+  }
+
+  #creative .creative-gallery > .creative-banner{
+    grid-area:banner !important;
+  }
+
+  #creative .creative-gallery > .creative-vertical:nth-child(2){
+    grid-area:thumb !important;
+  }
+
+  #creative .creative-gallery > .creative-vertical:nth-child(3){
+    grid-area:social !important;
+  }
+
+  #creative .creative-gallery > .creative-video{
+    grid-area:video !important;
+  }
+
+  #creative .creative-banner .creative-media,
+  #creative .creative-vertical .creative-media{
+    height:260px !important;
+    min-height:260px !important;
+  }
+
+  #creative .creative-video .tiktok-embed-wrap{
+    height:500px !important;
+    min-height:500px !important;
+  }
+}
