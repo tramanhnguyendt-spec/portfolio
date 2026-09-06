@@ -576,3 +576,83 @@
 @media(max-width:800px){
   .hero-visual .hero-photo{width:65vw!important;}
 }
+
+
+/* ===== CREATIVE GALLERY FINAL LAYOUT ===== */
+.creative-gallery .creative-card{box-sizing:border-box;}
+.creative-gallery .creative-media img{object-fit:contain !important;}
+.creative-gallery .creative-banner .creative-media img{object-fit:contain !important;}
+.creative-gallery .creative-video .tiktok-embed-wrap{width:100%;height:520px;min-height:0;}
+.creative-gallery .creative-video .tiktok-embed-wrap iframe{width:100%;height:100%;max-width:100%;min-height:0;}
+@media(max-width:800px){
+  .creative-gallery{grid-template-columns:1fr !important;}
+  .creative-gallery .creative-banner,.creative-gallery .creative-video{grid-column:auto !important;}
+  .creative-gallery .creative-banner .creative-media{height:220px;}
+  .creative-gallery .creative-vertical .creative-media{height:420px;}
+}
+
+/* ===== FINAL CREATIVE LAYOUT OVERRIDE ===== */
+#creative .creative-gallery{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  grid-template-areas:
+    "banner banner"
+    "thumb social"
+    "video video" !important;
+  gap:20px !important;
+  align-items:stretch !important;
+  margin-top:34px !important;
+}
+#creative .creative-card{
+  min-width:0 !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+#creative .creative-banner{grid-area:banner !important;display:block !important;}
+#creative button.creative-vertical:nth-child(2){grid-area:thumb !important;}
+#creative button.creative-vertical:nth-child(3){grid-area:social !important;}
+#creative .creative-video{grid-area:video !important;display:block !important;}
+#creative .creative-banner .creative-media{height:300px !important;}
+#creative .creative-vertical .creative-media{height:520px !important;}
+#creative .creative-media{
+  width:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:#f4f5f6 !important;
+  overflow:hidden !important;
+}
+#creative .creative-media img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+#creative .creative-caption{padding:14px 18px 17px !important;}
+#creative .creative-video .tiktok-embed-wrap{
+  height:560px !important;
+  width:100% !important;
+  background:#000 !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  overflow:hidden !important;
+}
+#creative .creative-video .tiktok-embed-wrap iframe{
+  width:100% !important;
+  height:100% !important;
+  border:0 !important;
+}
+@media(max-width:800px){
+  #creative .creative-gallery{
+    grid-template-columns:1fr !important;
+    grid-template-areas:
+      "banner"
+      "thumb"
+      "social"
+      "video" !important;
+  }
+  #creative .creative-banner .creative-media{height:220px !important;}
+  #creative .creative-vertical .creative-media{height:440px !important;}
+  #creative .creative-video .tiktok-embed-wrap{height:520px !important;}
+}
