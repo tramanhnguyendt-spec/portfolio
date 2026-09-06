@@ -4,7 +4,7 @@
 
    Ví dụ:
    profile: "profile.jpg"
-   banner01: "banner-01.jpg"
+   banner01: "banner-01.png"
    video01: "LINK TIKTOK"
 
    Ảnh nằm trong media/. Video TikTok chỉ cần dán link, không cần tải MP4.
@@ -14,20 +14,18 @@ const MEDIA = {
   profile: "profile.jpg",
 
   // G OFFICE — 3 ảnh evidence
-  gofficeTraffic: "goffice-organic-traffic.png",
   gofficeKeywords: "goffice-organic-keywords.png",
   gofficeRanking: "goffice-keyword-ranking.png",
 
   // VISA MINH QUÂN — 5 ảnh evidence
   visaRankingOverview: "visa-ranking-overview.png",
   visaKeywordDetail: "visa-keyword-detail.png",
-  visaAiOverview: "visa-ai-overview.png",
   visaTraffic: "visa-organic-traffic.png",
   visaProgress: "visa-seo-progress.png",
 
   // CREATIVE
-  banner01: "banner-01.jpg",
-  thumbnail01: "thumbnail-01.jpg",
+  banner01: "banner-01.png",
+  thumbnail01: "thumbnail-01.png",
   social01: "social-01.jpg",
   video01: "https://www.tiktok.com/@butterbbakery/video/7546107781745626386"
 };
@@ -78,12 +76,10 @@ if(heroPortrait){
 
 // Evidence
 const evidenceAlt = {
-  gofficeTraffic: "G Office Organic Traffic",
   gofficeKeywords: "G Office Organic Keywords",
   gofficeRanking: "G Office Keyword Ranking",
   visaRankingOverview: "Visa Minh Quân Ranking Overview",
   visaKeywordDetail: "Visa Minh Quân Keyword Detail",
-  visaAiOverview: "Visa Minh Quân SERP AI Overview",
   visaTraffic: "Visa Minh Quân Organic Traffic",
   visaProgress: "Visa Minh Quân SEO Progress"
 };
