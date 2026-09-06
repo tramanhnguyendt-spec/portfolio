@@ -3,7 +3,7 @@
    Tất cả ảnh + video bỏ chung vào thư mục: media/
 
    Ví dụ:
-   profile: "profile.jpg"
+   profile: "profile.png"
    banner01: "banner-01.png"
    video01: "LINK TIKTOK"
 
@@ -11,22 +11,22 @@
    ========================================================= */
 const MEDIA = {
   // HERO
-  profile: "profile.jpg",
+  profile: "profile.png",
 
-  // G OFFICE — 3 ảnh evidence
+  // G OFFICE — 2 ảnh evidence
   gofficeKeywords: "goffice-organic-keywords.png",
   gofficeRanking: "goffice-keyword-ranking.png",
 
-  // VISA MINH QUÂN — 5 ảnh evidence
+  // VISA MINH QUÂN — 4 ảnh evidence
   visaRankingOverview: "visa-ranking-overview.png",
   visaKeywordDetail: "visa-keyword-detail.png",
+  visaAiOverview: "visa-seo-progress.png",
   visaTraffic: "visa-organic-traffic.png",
-  visaProgress: "visa-seo-progress.png",
 
   // CREATIVE
-  banner01: "banner-01.png",
-  thumbnail01: "thumbnail-01.png",
-  social01: "social-01.jpg",
+  banner01: "thumbnail-01.png",
+  thumbnail01: "social-01.jpg",
+  social01: "banner-01.png",
   video01: "https://www.tiktok.com/@butterbbakery/video/7546107781745626386"
 };
 
@@ -76,12 +76,12 @@ if(heroPortrait){
 
 // Evidence
 const evidenceAlt = {
-  gofficeKeywords: "G Office Organic Keywords",
+  gofficeKeywords: "G Office Organic Traffic and Keywords",
   gofficeRanking: "G Office Keyword Ranking",
   visaRankingOverview: "Visa Minh Quân Ranking Overview",
-  visaKeywordDetail: "Visa Minh Quân Keyword Detail",
-  visaTraffic: "Visa Minh Quân Organic Traffic",
-  visaProgress: "Visa Minh Quân SEO Progress"
+  visaKeywordDetail: "Visa Minh Quân Keyword Growth",
+  visaAiOverview: "Visa Minh Quân SERP AI Overview",
+  visaTraffic: "Visa Minh Quân Organic and Referral Traffic"
 };
 
 document.querySelectorAll(".evidence-media[data-media]").forEach(slot => {
