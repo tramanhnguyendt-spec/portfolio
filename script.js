@@ -1,3 +1,4 @@
+// PORTFOLIO MEDIA FIX v4 — exact filenames + clean hero placeholder
 /* =========================================================
    MEDIA — CHỈ CẦN SỬA TÊN FILE Ở ĐÂY
    Tất cả ảnh + video bỏ chung vào thư mục: media/
@@ -24,9 +25,9 @@ const MEDIA = {
   visaTraffic: "visa-organic-traffic.png",
 
   // CREATIVE
-  banner01: "thumbnail-01.png",
-  thumbnail01: "social-01.jpg",
-  social01: "banner-01.png",
+  banner01: "banner-01.png",
+  thumbnail01: "thumbnail-01.png",
+  social01: "social-01.jpg",
   video01: "https://www.tiktok.com/@butterbbakery/video/7546107781745626386"
 };
 
@@ -47,15 +48,16 @@ function loadImageSlot(slot, key, alt){
   img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = alt || "Nguyễn Trâm Anh — Portfolio";
-  img.loading = "lazy";
   img.decoding = "async";
 
   img.addEventListener("error", () => {
     slot.classList.add("media-missing");
-    img.remove();
+    slot.innerHTML = '<span class="media-placeholder">Không tải được ảnh</span>';
+    console.warn("Không tải được media:", src);
   });
 
-  slot.prepend(img);
+  slot.innerHTML = "";
+  slot.appendChild(img);
 }
 
 // Hero
@@ -69,8 +71,13 @@ if(heroPortrait){
     img.alt = "Nguyễn Trâm Anh — SEO Executive";
     img.fetchPriority = "high";
     img.decoding = "async";
-    img.addEventListener("error", () => img.remove());
-    heroPortrait.prepend(img);
+    img.addEventListener("error", () => {
+      img.remove();
+      console.warn("Không tải được media:", src);
+    });
+    // Xóa hoàn toàn chữ placeholder "ẢNH TRÂM ANH" trước khi chèn ảnh
+    heroPortrait.innerHTML = "";
+    heroPortrait.appendChild(img);
   }
 }
 
@@ -104,9 +111,11 @@ document.querySelectorAll(".media-slot[data-media]").forEach(slot => {
   img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = creativeAlt[key] || "Creative work — Nguyễn Trâm Anh";
-  img.loading = "lazy";
   img.decoding = "async";
-  img.addEventListener("error", () => img.remove());
+  img.addEventListener("error", () => {
+    img.remove();
+    console.warn("Không tải được media:", src);
+  });
   slot.innerHTML = "";
   slot.appendChild(img);
 });
