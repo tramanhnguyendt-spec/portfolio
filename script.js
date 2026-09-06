@@ -33,7 +33,13 @@ const MEDIA = {
 };
 
 const MEDIA_PATH = "media/";
-const mediaUrl = key => MEDIA[key] ? MEDIA_PATH + MEDIA[key] : "";
+
+// Ảnh: tự động tìm trong media/. URL ngoài (ví dụ TikTok): giữ nguyên URL.
+const mediaUrl = key => {
+  const value = MEDIA[key];
+  if(!value) return "";
+  return /^https?:\/\//i.test(value) ? value : MEDIA_PATH + value;
+};
 
 function loadImageSlot(slot, key, alt){
   const src = mediaUrl(key);
