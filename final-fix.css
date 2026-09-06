@@ -1,0 +1,38 @@
+/* FINAL FIX — load AFTER navy-orange-final.css */
+
+/* G Office: white text on navy implementation card */
+#projects .case-box,
+#projects .case-box h3,
+#projects .case-box p,
+#projects .case-box li,
+#projects .case-box ul { color:#fff !important; }
+#projects .case-box .eyebrow { color:#ff5a36 !important; }
+
+/* AI: Human Check card */
+#ai .ai-highlight,
+#ai .ai-highlight h3,
+#ai .ai-highlight p,
+#ai .ai-highlight span,
+#ai .ai-highlight b { color:#fff !important; }
+#ai .ai-highlight > span:first-child,
+#ai .ai-highlight b { color:#ff5a36 !important; }
+
+/* AI proof card */
+#ai .ai-proof,
+#ai .ai-proof h3,
+#ai .ai-proof p,
+#ai .ai-proof span,
+#ai .ai-proof strong,
+#ai .ai-proof-flow i { color:#fff !important; }
+#ai .ai-proof .eyebrow { color:#ff5a36 !important; }
+
+/* G Office evidence images */
+#projects .evidence-grid-2{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;align-items:stretch!important;}
+#projects .evidence-grid-2 .evidence-photo{position:relative!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;align-items:stretch!important;min-width:0!important;height:auto!important;overflow:hidden!important;opacity:1!important;visibility:visible!important;transform:none!important;padding:18px!important;}
+#projects .evidence-grid-2 .evidence-media{position:relative!important;z-index:1!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:300px!important;min-height:300px!important;flex:0 0 300px!important;margin:0 0 16px!important;overflow:hidden!important;border-radius:12px!important;background:#eef2f5!important;opacity:1!important;visibility:visible!important;}
+#projects .evidence-grid-2 .evidence-media img{position:static!important;display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;margin:0!important;padding:0!important;opacity:1!important;visibility:visible!important;transform:none!important;border-radius:12px!important;background:#fff!important;}
+
+@media(max-width:800px){
+  #projects .evidence-grid-2{grid-template-columns:1fr!important;}
+  #projects .evidence-grid-2 .evidence-media{height:240px!important;min-height:240px!important;flex-basis:240px!important;}
+}
