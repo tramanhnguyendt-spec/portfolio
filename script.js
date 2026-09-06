@@ -5,9 +5,9 @@
    Ví dụ:
    profile: "profile.jpg"
    banner01: "banner-01.jpg"
-   video01: "video-01.mp4"
+   video01: "LINK TIKTOK"
 
-   Không cần sửa HTML khi đổi ảnh.
+   Ảnh nằm trong media/. Video TikTok chỉ cần dán link, không cần tải MP4.
    ========================================================= */
 const MEDIA = {
   // HERO
@@ -29,7 +29,7 @@ const MEDIA = {
   banner01: "banner-01.jpg",
   thumbnail01: "thumbnail-01.jpg",
   social01: "social-01.jpg",
-  video01: "video-01.mp4"
+  video01: "https://www.tiktok.com/@butterbbakery/video/7546107781745626386"
 };
 
 const MEDIA_PATH = "media/";
@@ -40,6 +40,7 @@ function loadImageSlot(slot, key, alt){
   if(!src || !slot) return;
 
   const img = document.createElement("img");
+  img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = alt || "Nguyễn Trâm Anh — Portfolio";
   img.loading = "lazy";
@@ -98,6 +99,7 @@ document.querySelectorAll(".media-slot[data-media]").forEach(slot => {
   if(!src) return;
 
   const img = document.createElement("img");
+  img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = creativeAlt[key] || "Creative work — Nguyễn Trâm Anh";
   img.loading = "lazy";
@@ -107,19 +109,30 @@ document.querySelectorAll(".media-slot[data-media]").forEach(slot => {
   slot.appendChild(img);
 });
 
-// Creative video
+// Creative video — TikTok Embed
 const videoCard = document.querySelector("[data-video-media]");
 if(videoCard){
   const key = videoCard.dataset.videoMedia;
-  const src = mediaUrl(key);
-  if(src){
-    const videoSlot = videoCard.querySelector(".video-slot");
-    if(videoSlot){
+  const src = MEDIA[key];
+  const videoSlot = videoCard.querySelector(".video-slot");
+
+  if(src && videoSlot){
+    const match = String(src).match(/video\/(\d+)/);
+    const videoId = match ? match[1] : "";
+
+    if(videoId){
       videoSlot.innerHTML = `
-        <video class="creative-video" controls preload="metadata" playsinline>
-          <source src="${src}" type="video/mp4">
-          Trình duyệt của bạn không hỗ trợ video.
-        </video>`;
+        <div class="tiktok-embed-wrap">
+          <iframe
+            src="https://www.tiktok.com/player/v1/${videoId}?description=1&music_info=1"
+            title="TikTok video — Creative work — Nguyễn Trâm Anh"
+            loading="lazy"
+            allow="fullscreen"
+            allowfullscreen>
+          </iframe>
+        </div>`;
+    } else {
+      videoSlot.innerHTML = `<a class="video-link" href="${src}" target="_blank" rel="noopener noreferrer">Xem video trên TikTok</a>`;
     }
   }
 }
@@ -157,31 +170,111 @@ const sectionObserver=new IntersectionObserver(entries=>{
 sections.forEach(s=>sectionObserver.observe(s));
 
 /* =========================================================
-   IMAGE MODAL
+   IMAGE MODAL — CLICK ANY PORTFOLIO IMAGE TO READ DATA
+   Click image = zoom 2x
+   Mouse wheel = zoom in/out
+   Drag = move when zoomed
    ========================================================= */
 const modal=document.getElementById("imageModal");
 const modalImage=document.getElementById("modalImage");
 
-document.querySelectorAll("[data-modal-media]").forEach(card=>{
-  card.addEventListener("click",()=>{
-    const key=card.dataset.modalMedia;
-    const src=mediaUrl(key);
-    if(!src) return;
-    modalImage.src=src;
-    modalImage.alt=creativeAlt[key] || "Tác phẩm Creative của Nguyễn Trâm Anh";
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden","false");
-    document.body.classList.add("no-scroll");
-  });
-});
+let zoomScale=1;
+let isDragging=false;
+let startX=0;
+let startY=0;
+let offsetX=0;
+let offsetY=0;
+
+function applyZoom(){
+  if(!modalImage) return;
+  modalImage.style.transform=`translate(${offsetX}px, ${offsetY}px) scale(${zoomScale})`;
+  modalImage.classList.toggle("is-zoomed", zoomScale>1);
+}
+
+function openImageModal(src, alt=""){
+  if(!modal || !modalImage || !src) return;
+  zoomScale=1;
+  offsetX=0;
+  offsetY=0;
+  modalImage.src=src;
+  modalImage.alt=alt || "Portfolio — Nguyễn Trâm Anh";
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("no-scroll");
+  applyZoom();
+}
 
 function closeModal(){
+  if(!modal || !modalImage) return;
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden","true");
   modalImage.src="";
+  modalImage.style.transform="";
   document.body.classList.remove("no-scroll");
 }
 
+/* Any real image inside the portfolio can be opened full-size */
+document.addEventListener("click", e=>{
+  const img=e.target.closest("img.portfolio-zoomable");
+  if(!img || modal?.classList.contains("open")) return;
+  e.preventDefault();
+  e.stopPropagation();
+  openImageModal(img.currentSrc || img.src, img.alt);
+});
+
+/* Click the opened image to toggle readable 2x zoom */
+modalImage?.addEventListener("click", e=>{
+  e.stopPropagation();
+  if(zoomScale===1){
+    zoomScale=2;
+  }else{
+    zoomScale=1;
+    offsetX=0;
+    offsetY=0;
+  }
+  applyZoom();
+});
+
+/* Mouse wheel zoom */
+modalImage?.addEventListener("wheel", e=>{
+  if(!modal?.classList.contains("open")) return;
+  e.preventDefault();
+  zoomScale += e.deltaY < 0 ? 0.25 : -0.25;
+  zoomScale=Math.min(4,Math.max(1,zoomScale));
+  if(zoomScale===1){offsetX=0;offsetY=0;}
+  applyZoom();
+},{passive:false});
+
+/* Drag the image while zoomed */
+modalImage?.addEventListener("pointerdown", e=>{
+  if(zoomScale<=1) return;
+  isDragging=true;
+  modalImage.setPointerCapture?.(e.pointerId);
+  startX=e.clientX-offsetX;
+  startY=e.clientY-offsetY;
+  modalImage.classList.add("is-dragging");
+});
+
+modalImage?.addEventListener("pointermove", e=>{
+  if(!isDragging) return;
+  offsetX=e.clientX-startX;
+  offsetY=e.clientY-startY;
+  applyZoom();
+});
+
+function stopDragging(){
+  isDragging=false;
+  modalImage?.classList.remove("is-dragging");
+}
+modalImage?.addEventListener("pointerup",stopDragging);
+modalImage?.addEventListener("pointercancel",stopDragging);
+modalImage?.addEventListener("pointerleave",()=>{ if(isDragging) stopDragging(); });
+
+modal?.addEventListener("click",e=>{
+  if(e.target===modal) closeModal();
+});
+
 document.querySelector(".modal-close")?.addEventListener("click",closeModal);
-modal?.addEventListener("click",e=>{if(e.target===modal)closeModal()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape") closeModal();
+});
