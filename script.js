@@ -1,30 +1,22 @@
-// PORTFOLIO MEDIA FIX v4 — exact filenames + clean hero placeholder
 /* =========================================================
    MEDIA — CHỈ CẦN SỬA TÊN FILE Ở ĐÂY
    Tất cả ảnh + video bỏ chung vào thư mục: media/
 
    Ví dụ:
-   profile: "profile.png"
+   profile: "profile.jpg"
    banner01: "banner-01.png"
    video01: "LINK TIKTOK"
 
    Ảnh nằm trong media/. Video TikTok chỉ cần dán link, không cần tải MP4.
    ========================================================= */
 const MEDIA = {
-  // HERO
   profile: "profile.png",
-
-  // G OFFICE — 2 ảnh evidence
   gofficeKeywords: "goffice-organic-keywords.png",
   gofficeRanking: "goffice-keyword-ranking.png",
-
-  // VISA MINH QUÂN — 4 ảnh evidence
   visaRankingOverview: "visa-ranking-overview.png",
   visaKeywordDetail: "visa-keyword-detail.png",
   visaAiOverview: "visa-seo-progress.png",
   visaTraffic: "visa-organic-traffic.png",
-
-  // CREATIVE
   banner01: "banner-01.png",
   thumbnail01: "thumbnail-01.png",
   social01: "social-01.jpg",
@@ -48,16 +40,15 @@ function loadImageSlot(slot, key, alt){
   img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = alt || "Nguyễn Trâm Anh — Portfolio";
+  img.loading = "eager";
   img.decoding = "async";
 
   img.addEventListener("error", () => {
     slot.classList.add("media-missing");
-    slot.innerHTML = '<span class="media-placeholder">Không tải được ảnh</span>';
-    console.warn("Không tải được media:", src);
+    img.remove();
   });
 
-  slot.innerHTML = "";
-  slot.appendChild(img);
+  slot.prepend(img);
 }
 
 // Hero
@@ -71,24 +62,19 @@ if(heroPortrait){
     img.alt = "Nguyễn Trâm Anh — SEO Executive";
     img.fetchPriority = "high";
     img.decoding = "async";
-    img.addEventListener("error", () => {
-      img.remove();
-      console.warn("Không tải được media:", src);
-    });
-    // Xóa hoàn toàn chữ placeholder "ẢNH TRÂM ANH" trước khi chèn ảnh
-    heroPortrait.innerHTML = "";
-    heroPortrait.appendChild(img);
+    img.addEventListener("error", () => img.remove());
+    heroPortrait.replaceChildren(img);
   }
 }
 
 // Evidence
 const evidenceAlt = {
-  gofficeKeywords: "G Office Organic Traffic and Keywords",
+  gofficeKeywords: "G Office Organic Keywords",
   gofficeRanking: "G Office Keyword Ranking",
   visaRankingOverview: "Visa Minh Quân Ranking Overview",
-  visaKeywordDetail: "Visa Minh Quân Keyword Growth",
-  visaAiOverview: "Visa Minh Quân SERP AI Overview",
-  visaTraffic: "Visa Minh Quân Organic and Referral Traffic"
+  visaKeywordDetail: "Visa Minh Quân Keyword Detail",
+  visaTraffic: "Visa Minh Quân Organic Traffic",
+  visaProgress: "Visa Minh Quân SEO Progress"
 };
 
 document.querySelectorAll(".evidence-media[data-media]").forEach(slot => {
@@ -111,11 +97,9 @@ document.querySelectorAll(".media-slot[data-media]").forEach(slot => {
   img.className = "portfolio-zoomable";
   img.src = src;
   img.alt = creativeAlt[key] || "Creative work — Nguyễn Trâm Anh";
+  img.loading = "eager";
   img.decoding = "async";
-  img.addEventListener("error", () => {
-    img.remove();
-    console.warn("Không tải được media:", src);
-  });
+  img.addEventListener("error", () => img.remove());
   slot.innerHTML = "";
   slot.appendChild(img);
 });
