@@ -38,18 +38,3 @@
 
 .project-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}.project-link{font-size:12px;font-weight:700;color:var(--blue);border-bottom:1px solid #b9cde2;padding-bottom:2px}.tool-groups{display:grid;grid-template-columns:1fr;gap:22px}.tool-group{padding:25px 0;border-top:1px solid var(--line)}.tool-group h3{font-size:18px;margin:0 0 15px}.tool-group .tool-list{gap:9px}.tool-group .tool-list span{background:white}
 @media(max-width:800px){.project-meta{justify-content:flex-start}.tool-groups{gap:10px}.ai-workflow{grid-template-columns:1fr}.ai-proof{grid-template-columns:1fr}.ai-proof-flow{justify-content:flex-start}}
-/* CREATIVE FINAL: left = banner + video; right = two vertical images side-by-side */
-#creative .creative-gallery{display:grid!important;grid-template-columns:1fr 1fr!important;gap:20px!important;align-items:stretch!important}
-#creative .creative-left{display:grid!important;grid-template-rows:auto 1fr!important;gap:20px!important;min-width:0!important}
-#creative .creative-right{display:grid!important;grid-template-columns:1fr 1fr!important;gap:20px!important;min-width:0!important}
-#creative .creative-item{min-width:0!important;overflow:hidden!important;border-radius:18px!important;background:#faf9f6!important}
-#creative .creative-banner-btn{display:block!important;width:100%!important;padding:0!important;border:0!important;background:none!important;cursor:pointer!important}
-#creative .creative-banner .media-slot{display:block!important;width:100%!important}
-#creative .creative-banner img{display:block!important;width:100%!important;height:auto!important;max-height:250px!important;object-fit:cover!important}
-#creative .creative-video{min-height:420px!important}
-#creative .creative-video .video-slot,#creative .creative-video .tiktok-embed-wrap,#creative .creative-video iframe{width:100%!important;height:100%!important;min-height:420px!important}
-#creative .creative-video iframe{display:block!important;border:0!important}
-#creative .creative-right .creative-vertical{display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;border:0!important;cursor:pointer!important}
-#creative .creative-right .media-slot{width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important}
-#creative .creative-right .media-slot img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;background:#faf9f6!important}
-@media(max-width:800px){#creative .creative-gallery{grid-template-columns:1fr!important}#creative .creative-right{grid-template-columns:1fr 1fr!important}}
