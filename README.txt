@@ -1,16 +1,12 @@
-FILE SỬA KHÚC CREATIVE
+PORTFOLIO — BẢN HOÀN CHỈNH
 
-Thay block Creative hiện tại có:
-Thumbnail / Product Visual
-Thiết kế hình ảnh sản phẩm
+Cấu trúc:
+- index.html
+- style.css
+- navy-orange-final.css
+- script.js
+- media/ (10 ảnh)
 
-bằng block trong creative-item-fixed.html.
+Bản này giữ nguyên các section khác. G Office có 2 ảnh evidence hiển thị trực tiếp từ media/. Creative được bố cục: Banner + TikTok bên trái; Thumbnail + Social Post song song bên phải.
 
-Tên ấn phẩm đã đổi thành:
-Elevator Advertising Poster
-Thiết kế poster quảng cáo thang máy – G Office
-
-Ảnh giữ nguyên:
-media/thumbnail-01.png
-
-Không thay đổi các phần khác của portfolio.
+Upload nguyên folder này vào repo GitHub Pages, giữ nguyên cấu trúc thư mục.
