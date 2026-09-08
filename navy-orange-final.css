@@ -707,3 +707,20 @@
     grid-template-rows:auto 420px !important;
   }
 }
+
+
+/* FINAL AI DARK-CARD COLOR LOCK
+   Prevent generic light-section heading rules from overriding
+   headings placed on dark AI cards. */
+.section:not(.dark) .ai-highlight h3,
+.section:not(.dark) .ai-highlight p,
+.section:not(.dark) .ai-proof h3{
+  color:#fff !important;
+}
+.section:not(.dark) .ai-highlight span,
+.section:not(.dark) .ai-highlight b{
+  color:#FF7A3D !important;
+}
+.section:not(.dark) .ai-proof .eyebrow{
+  color:#FF7A3D !important;
+}
